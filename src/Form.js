@@ -30,15 +30,19 @@ const OptimizeForm = () => {
     >
       <Form className="form">
         <h2>Отправить пожертвование</h2>
+
         <label htmlFor="name">Ваше имя</label>
         <Field id="name" name="name" type="text" />
         <ErrorMessage name="name" component="div" className="error" />
+
         <label htmlFor="email">Ваша почта</label>
         <Field id="email" name="email" type="email" />
         <ErrorMessage name="email" component="div" className="error" />
+
         <label htmlFor="amount">Количество</label>
         <Field id="amount" name="amount" type="number" />
         <ErrorMessage name="amount" component="div" className="error" />
+
         <label htmlFor="currency">Валюта</label>
         <Field id="currency" name="currency" as="select">
           <option value="">Выберите валюту</option>
@@ -47,14 +51,17 @@ const OptimizeForm = () => {
           <option value="RUB">RUB</option>
         </Field>
         <ErrorMessage name="currency" component="div" className="error" />
+
         <label htmlFor="text">Ваше сообщение</label>
         <Field id="text" name="text" as="textarea" />
         <ErrorMessage name="text" component="div" className="error" />
+
         <label className="checkbox">
           <Field name="terms" type="checkbox" />
           <ErrorMessage name="terms" component="div" className="error" />
           Соглашаетесь с политикой конфиденциальности?
         </label>
+        
         <button type="submit">Отправить</button>
       </Form>
     </Formik>
